@@ -5,20 +5,14 @@
 
 
 #include "support_common.h" /* include peripheral declarations and more */
-#if (CONSOLE_IO_SUPPORT || ENABLE_UART_SUPPORT)
-/* Standard IO is only possible if Console or UART support is enabled. */
-#include <stdio.h>
-#endif
+#include "global.h"
 
-
-int main(void)
+__declspec(noreturn)int main(void)
 {
-	int counter = 0;
+	gpio_init();
+	qspi_init();
 
-#if (CONSOLE_IO_SUPPORT || ENABLE_UART_SUPPORT)
-	printf("Hello World in C++ from MCF52259 derivative on TWR-MCF5225X board\n\r");
-#endif
 	for(;;) {	   
-	   	counter++;
+	   	
 	}
 }
