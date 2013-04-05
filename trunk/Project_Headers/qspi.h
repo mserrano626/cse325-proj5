@@ -11,5 +11,6 @@
 #include "support_common.h"
 
 extern void qspi_init();
+extern void qspi_transmit(int data[]);
 
 #endif /* QSPI_H_ */
