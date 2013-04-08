@@ -11,7 +11,10 @@ __declspec(noreturn)int main(void)
 {
 	gpio_init();
 	qspi_init();
-
+	
+	
+	//ISR for qspi
+	//interupt_config(18, 4, 6, qspi_isr);
 	for(;;) {	   
 	   	
 	}
