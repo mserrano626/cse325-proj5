@@ -1,8 +1,9 @@
-/*
- * qspi.c
- *
- *  Created on: Apr 4, 2013
- *      Author: maserra3
+/*Source File:  qspi.c
+ *Project Name: Project 5
+ *Name:                 Mario Serrano
+ *Email:                maserra3@asu.edu
+ *Course name:  CSE325 Embedded Microprocessor Systems
+ *Semester:             Spring 2013
  */
 
 #include "qspi.h"
@@ -74,9 +75,9 @@ void qspi_transmit(int data[]){
 	MCF_QSPI_QDLYR |= 0x8000;
 	
 	
-	transfer = MCF_QSPI_QIR | 0x0001;
 	
-	while((transfer)== 0){
+	
+	while(!(MCF_QSPI_QIR | 0x0001)){
 		
 	}
 }

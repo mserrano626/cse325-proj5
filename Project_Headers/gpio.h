@@ -1,8 +1,9 @@
-/*
- * gpio.h
- *
- *  Created on: Apr 4, 2013
- *      Author: maserra3
+/*Source File:  gpio.h
+ *Project Name: Project 5
+ *Name:                 Mario Serrano
+ *Email:                maserra3@asu.edu
+ *Course name:  CSE325 Embedded Microprocessor Systems
+ *Semester:             Spring 2013
  */
 
 #ifndef GPIO_H_
