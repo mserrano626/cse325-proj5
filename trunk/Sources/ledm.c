@@ -1,8 +1,9 @@
-/*
- * ledm.c
- *
- *  Created on: Apr 5, 2013
- *      Author: maserra3
+/*Source File:  ledm.c
+ *Project Name: Project 5
+ *Name:                 Mario Serrano
+ *Email:                maserra3@asu.edu
+ *Course name:  CSE325 Embedded Microprocessor Systems
+ *Semester:             Spring 2013
  */
 
 #include "global.h"
@@ -60,7 +61,7 @@ void led_matrix_init(){
 			else if (pattern1[row][col] == green){
 				green_col[row] = (1 << col) | green_col[row];
 			} 
-			else if (pattern1[row][col] = orange){
+			else if (pattern1[row][col] == orange){
 				red_col[row] = (1 << col) | red_col[row];
 				green_col[row] = (1 << col) | green_col[row];
 			}

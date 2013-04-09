@@ -1,8 +1,9 @@
-/*
- * itrc.h
- *
- *  Created on: Apr 7, 2013
- *      Author: rmahmad
+/*Source File:  itrc.h
+ *Project Name: Project 5
+ *Name:                 Mario Serrano
+ *Email:                maserra3@asu.edu
+ *Course name:  CSE325 Embedded Microprocessor Systems
+ *Semester:             Spring 2013
  */
 
 #ifndef ITRC_H_

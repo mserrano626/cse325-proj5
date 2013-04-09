@@ -1,8 +1,9 @@
-/*
- * global.h
- *
- *  Created on: Apr 4, 2013
- *      Author: maserra3
+/*Source File:  global.h
+ *Project Name: Project 5
+ *Name:                 Mario Serrano
+ *Email:                maserra3@asu.edu
+ *Course name:  CSE325 Embedded Microprocessor Systems
+ *Semester:             Spring 2013
  */
 
 #ifndef GLOBAL_H_

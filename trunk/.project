@@ -27,7 +27,7 @@
 				</dictionary>
 				<dictionary>
 					<key>org.eclipse.cdt.make.core.buildLocation</key>
-					<value>${ProjDirPath}/TWR-MCF5225X_Internal_Flash</value>
+					<value>${ProjDirPath}/TWR-MCF5225X_Console_Internal_RAM</value>
 				</dictionary>
 				<dictionary>
 					<key>org.eclipse.cdt.make.core.contents</key>
