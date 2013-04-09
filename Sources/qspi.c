@@ -19,21 +19,23 @@ void qspi_init(){
 	//baud rate is a pre divider
 	//qspi needs to transmit 8 bit values
 	
-	// 1010 0000 0010 1000
-	//master on, 0 , 8 bits per transfer, 0, 0, baud = 40= 1Mhz transfer rate
-	MCF_QSPI_QMR = 0xA028;
+	// 1010 0010 0010 1000
+	//master on, 0 , 8 bits per transfer, 0, 0, baud = A0= 250khz transfer rate
+	
+	MCF_QSPI_QMR = 0xA0FF;
 	
 	//
-	MCF_QSPI_QDLYR = ~(0xFFFF);
+	MCF_QSPI_QDLYR = 0x0000;
 	
 	//Disable all
 	//QWR[ENDQP] and QWR[NEWQP] will be configured before transfer begins
-	MCF_QSPI_QWR = ~(0xFFFF);
+	MCF_QSPI_QWR = 0x0000;
+	
 	
 	//initialize QIR
 	//clear all fields/ flags
-	//QIR[SPIFE] -- enable interupts following transfer of last datum
-	MCF_QSPI_QIR = 0x0007;
+	//QIR[SPIFE] -- enable interrupts following transfer of last datum
+	MCF_QSPI_QIR = 0x010D;
 	
 	/*
 	 * 
@@ -47,25 +49,34 @@ void qspi_init(){
 }
 
 void qspi_transmit(int data[]){
+	int transfer;
 	int i;
 	int QSPI_XMIT_RAM_BASE_ADDR = 0x00;
 	int QSPI_CMD_RAM_BASE_ADDR = 0x20;
 	
-	for (i = 0; i <8; i++){
-		MCF_QSPI_QAR = QSPI_XMIT_RAM_BASE_ADDR + i;
-		MCF_QSPI_QDR = data[i];
+	//load data into ram
+	// loads 8 bits at a time, 3 times
+	for (i = 0; i < 3; i++){
+		MCF_QSPI_QAR = (unsigned short)(QSPI_XMIT_RAM_BASE_ADDR + i);
+		MCF_QSPI_QDR = (unsigned short)data[i];
 	}
-	for (i = 0; i <8; i++){
+	//load commands into ram
+	for (i = 0; i < 3; i++){
 		MCF_QSPI_QAR = QSPI_CMD_RAM_BASE_ADDR + i;
-		MCF_QSPI_QDR = 0x4000;
+		MCF_QSPI_QDR = 0x4F00;
 	}
 	
+	//set start and end position pointers
 	MCF_QSPI_QWR &= MCF_QSPI_QWR_NEWQP(0);
-	MCF_QSPI_QWR |= MCF_QSPI_QWR_ENDQP(7);
+	MCF_QSPI_QWR |= MCF_QSPI_QWR_ENDQP(2);
 	
+	//initiate transfer
 	MCF_QSPI_QDLYR |= 0x8000;
 	
-	while((MCF_QSPI_QIR & MCF_QSPI_QIR_SPIF)== 0){
+	
+	transfer = MCF_QSPI_QIR | 0x0001;
+	
+	while((transfer)== 0){
 		
 	}
 }

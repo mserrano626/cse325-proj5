@@ -11,6 +11,6 @@
 #include "support_common.h"
 
 extern void gpio_init();
-extern void set_portTH(int n);
+
 
 #endif /* GPIO_H_ */

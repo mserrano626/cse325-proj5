@@ -12,6 +12,10 @@
 #include "qspi.h"
 #include "button.h"
 #include "timer.h"
+#include "support_common.h"
+#include "itrc.h"
+#include "ledm.h"
+#include "pit.h"
 
 
 
