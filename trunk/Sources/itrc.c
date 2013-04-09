@@ -7,7 +7,7 @@
  */
 
 #include "itrc.h"
-#include "pit.h"
+//#include "pit.h"
 //#include "pwm.h"
 //#include "note.h"
 //#include "song.h"
@@ -57,7 +57,7 @@ asm __declspec(standard_abi) void int_uninhibit_all(){
 
 __declspec(interrupt) void pit0_isr(){
 
-	
+				led_refresh();
                 //Clear pit 0 channel 0 interrupt request flag
                 MCF_PIT0_PCSR |= 0x0004;
 
@@ -65,10 +65,10 @@ __declspec(interrupt) void pit0_isr(){
                 //note(0xFF, 0x03);
 
                 //stop timer and reset
-                pit_off();
+                //pit_off();
 
-                // play the next note
-                //play_song();    
+                // next row
+                
 }
 
 __declspec(interrupt) void gpt0_isr()
@@ -80,10 +80,10 @@ __declspec(interrupt) void gpt0_isr()
         
 }
 
-__declspec(interrput) void qspi_isr()
-{
+//__declspec(interrput) void qspi_isr()
+//{
 	//interupt_config(18, 4, 6, isr_funct qspi_isr);
 	//clear request flag
-	MCF_QSPI_QIR &= (~(0x1) << 8);
+	//MCF_QSPI_QIR &= (~(0x1) << 8);
 	
-}
+//}

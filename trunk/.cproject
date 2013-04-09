@@ -27,7 +27,7 @@
 						<toolChain id="com.freescale.coldfire.toolchain.toolchain.project.1995570918" name="ColdFire Toolchain" superClass="com.freescale.coldfire.toolchain.toolchain.project">
 							<option id="com.freescale.coldfire.toolchain.sharedoption.processor.1087837017" superClass="com.freescale.coldfire.toolchain.sharedoption.processor" value="com.freescale.coldfire.toolchain.sharedoption.processor.52259" valueType="enumerated"/>
 							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="com.freescale.coldfire.toolchain.platform.75171228" name="ColdFire Target Platform" superClass="com.freescale.coldfire.toolchain.platform"/>
-							<builder buildPath="${ProjDirPath}/TWR-MCF5225X_Console_Internal_RAM" id="com.freescale.coldfire.toolchain.builder.2008407779" name="GNU Make Builder.TWR-MCF5225X_Console_Internal_RAM" superClass="com.freescale.coldfire.toolchain.builder"/>
+							<builder buildPath="${ProjDirPath}/TWR-MCF5225X_Console_Internal_RAM" id="com.freescale.coldfire.toolchain.builder.2008407779" name="GNU Make Builder.TWR-MCF5225X_Console_Internal_RAM" parallelBuildWorkspaceOn="true" parallelizationNumber="-1" superClass="com.freescale.coldfire.toolchain.builder"/>
 							<tool id="coldfire.toolchain.burner.1444718464" name="Burner" superClass="coldfire.toolchain.burner"/>
 							<tool id="com.freescale.coldfire.toolchain.linker.debug.1211210655" name="ColdFire Linker" superClass="com.freescale.coldfire.toolchain.linker.debug">
 								<option id="com.freescale.coldfire.toolchain.linker.base.generateLinkMap.340765348" superClass="com.freescale.coldfire.toolchain.linker.base.generateLinkMap" value="true" valueType="boolean"/>
@@ -2898,7 +2898,7 @@
 						<toolChain id="com.freescale.coldfire.toolchain.toolchain.project.715093195" name="ColdFire Toolchain" superClass="com.freescale.coldfire.toolchain.toolchain.project">
 							<option id="com.freescale.coldfire.toolchain.sharedoption.processor.1623149004" superClass="com.freescale.coldfire.toolchain.sharedoption.processor" value="com.freescale.coldfire.toolchain.sharedoption.processor.52259" valueType="enumerated"/>
 							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="com.freescale.coldfire.toolchain.platform.626125009" name="ColdFire Target Platform" superClass="com.freescale.coldfire.toolchain.platform"/>
-							<builder buildPath="${ProjDirPath}/TWR-MCF5225X_Internal_Flash" id="com.freescale.coldfire.toolchain.builder.1471346444" name="GNU Make Builder.TWR-MCF5225X_Internal_Flash" superClass="com.freescale.coldfire.toolchain.builder"/>
+							<builder buildPath="${ProjDirPath}/TWR-MCF5225X_Internal_Flash" id="com.freescale.coldfire.toolchain.builder.1471346444" name="GNU Make Builder.TWR-MCF5225X_Internal_Flash" parallelBuildWorkspaceOn="true" parallelizationNumber="-1" superClass="com.freescale.coldfire.toolchain.builder"/>
 							<tool id="coldfire.toolchain.burner.1691473718" name="Burner" superClass="coldfire.toolchain.burner"/>
 							<tool id="com.freescale.coldfire.toolchain.linker.debug.1121279576" name="ColdFire Linker" superClass="com.freescale.coldfire.toolchain.linker.debug">
 								<option id="com.freescale.coldfire.toolchain.linker.base.generateLinkMap.1405202723" superClass="com.freescale.coldfire.toolchain.linker.base.generateLinkMap" value="true" valueType="boolean"/>

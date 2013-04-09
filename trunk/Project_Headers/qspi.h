@@ -10,7 +10,7 @@
 
 #include "support_common.h"
 
-extern void qspi_init(int bits, int fqspi, int delay);
-extern void qspi_transmit(int n, int *data);
+extern void qspi_init();
+extern void qspi_transmit(int []);
 
 #endif /* QSPI_H_ */
